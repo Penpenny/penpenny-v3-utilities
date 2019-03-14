@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Penpenny/penpenny-v3-utilities/issues"
   },
-  "homepage": "https://github.com/Penpenny/penpenny-v3-utilities#readme"
+  "homepage": "https://github.com/Penpenny/penpenny-v3-utilities#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
