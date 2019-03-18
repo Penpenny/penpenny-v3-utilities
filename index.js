@@ -1,9 +1,9 @@
 const keymanager = require('./lib/keymanager');
 const errors = require('./utility/errors');
-const validaterErrors = require('./utility/validatererrors');
+const validatorErrors = require('./utility/validatorerrors');
 
 module.exports = {
     keymanager,
     errors,
-    validaterErrors
+    validatorErrors
 };
