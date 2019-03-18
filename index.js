@@ -1,11 +1,7 @@
-const keymanager = require('./lib/keymanager');
-const errors = require('./utility/errors');
-const validatorErrors = require('./utility/validatorerrors');
-const errorMessages = require('./utility/errormessages');
+const lib = require('./lib');
+const utility = require('./utility');
 
 module.exports = {
-    keymanager,
-    errors,
-    validatorErrors,
-    errorMessages
+    lib,
+    utility,
 };
