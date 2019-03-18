@@ -1,6 +1,6 @@
-const errors = require('./utility/errors');
-const validatorErrors = require('./utility/validatorerrors');
-const errorMessages = require('./utility/errormessages');
+const errors = require('./errors');
+const validatorErrors = require('./validatorerrors');
+const errorMessages = require('./errormessages');
 
 module.exports = {
     errors,
