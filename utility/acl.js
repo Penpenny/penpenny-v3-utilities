@@ -41,9 +41,9 @@ async function check(acl, req, res, next) {
             const result = await aclCheck(acl, roles, req.route.path, req.method.toLowerCase(), res, next);
             return result;
         } else {
-            throw new errors.InvalidData({
-                message: 'JWT Token missing'
-            });
+            const roles = 'guest';
+            const result = await aclCheck(acl, roles, req.route.path, req.method.toLowerCase(), res, next);
+            return result;
         }
     } catch (e) {
         throw new errors.InvalidData({
