@@ -68,6 +68,11 @@ function ErrorFilter(e) {
     return e.response.data.error.message;
 }
 
+function ExpErrorHandler(error) {
+    this.code = error.code || 400;
+    this.message = error.message || 'Something Went wrong!';
+    this.name = error.name || 'Bad Request';
+}
 
 NotFound.prototype = Error.prototype;
 NotAllowed.prototype = Error.prototype;
@@ -76,6 +81,7 @@ InternalServerError.prototype = Error.prototype;
 UnauthorizedAccess.prototype = Error.prototype;
 ErrorFilter.prototype = Error.prototype;
 JwtExpired.prototype = Error.prototype;
+ExpErrorHandler.prototype = Error.prototype;
 
 module.exports.NotFound = NotFound;
 module.exports.NotAllowed = NotAllowed;
@@ -84,3 +90,4 @@ module.exports.InternalServerError = InternalServerError;
 module.exports.UnauthorizedAccess = UnauthorizedAccess;
 module.exports.ErrorFilter = ErrorFilter;
 module.exports.JwtExpired = JwtExpired;
+module.exports.ExpErrorHandler = ExpErrorHandler;
