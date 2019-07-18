@@ -53,6 +53,17 @@ function UnauthorizedAccess(message, code) {
     this.name = 'Unauthorized Access';
 }
 
+function JwtExpired(message, code) {
+    if (code) {
+        this.code = code;
+    } else {
+        this.code = 463;
+    }
+
+    this.message = message || 'Jwt Expired or invalid';
+    this.name = 'Jwt Expired';
+}
+
 function ErrorFilter(e) {
     return e.response.data.error.message;
 }
@@ -64,6 +75,7 @@ InvalidData.prototype = Error.prototype;
 InternalServerError.prototype = Error.prototype;
 UnauthorizedAccess.prototype = Error.prototype;
 ErrorFilter.prototype = Error.prototype;
+JwtExpired.prototype = Error.prototype;
 
 module.exports.NotFound = NotFound;
 module.exports.NotAllowed = NotAllowed;
@@ -71,3 +83,4 @@ module.exports.InvalidData = InvalidData;
 module.exports.InternalServerError = InternalServerError;
 module.exports.UnauthorizedAccess = UnauthorizedAccess;
 module.exports.ErrorFilter = ErrorFilter;
+module.exports.JwtExpired = JwtExpired;
