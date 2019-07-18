@@ -46,8 +46,8 @@ async function check(acl, req, res, next) {
             return result;
         }
     } catch (e) {
-        throw new errors.InvalidData({
-            message: 'JWT Ttoken is invalid or expired'
+        throw new errors.JwtExpired({
+            message: 'JWT token is invalid or expired.'
         });
     }
 }
