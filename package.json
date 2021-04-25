@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/Penpenny/penpenny-v3-utilities#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.21.1"
   }
 }
